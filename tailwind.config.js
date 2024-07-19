@@ -80,6 +80,7 @@ module.exports = withMT({
         'orange-700': withOpacity('--color-orange-700'),
         'orange-800': withOpacity('--color-orange-800'),
         'orange-900': withOpacity('--color-orange-900'),
+        
         social: {
           facebook: '#3b5998',
           'facebook-hover': '#35508a',

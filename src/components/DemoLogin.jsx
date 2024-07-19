@@ -5,12 +5,12 @@ import React, { useState } from "react";
 
 
 const DemoLogin = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  // const [darkMode, setDarkMode] = useState(false);
   return (
-    <div className="flex flex-col justify-center items-center w-full h-[100vh] bg-[#282D2D] px-5">
-      <div className=" flex flex-col items-end justify-start  overflow-hidden mb-2 xl:max-w-3xl w-full">
-        <div className="flex">
-          <h3 className="text-white">Dark Mode : &nbsp;</h3>
+    <div className="flex flex-col justify-center  items-center w-full h-[100] bg-amber-50 px-5 mb-12">
+      <div className=" flex flex-col justify-center border-8 border-black overflow-hidden mb-2 xl:max-w-3xl w-full">
+        {/* <div className="flex">
+          <h3 className="text-white">Dark Mode : &nbsp;</h3> 
           <label class="inline-flex relative items-center mr-5 cursor-pointer">
             <input
               type="checkbox"
@@ -31,64 +31,77 @@ const DemoLogin = () => {
         className={`xl:max-w-3xl ${
           darkMode ? "bg-black" : "bg-white"
         }  w-full p-5 sm:p-10 rounded-md`}
-      >
+      > */}
         <h1
-          className={`text-center text-xl sm:text-3xl font-semibold ${
-            darkMode ? "text-white" : "text-black"
-          }`}
-        >
-          Register for a free account
+          className={'flex font-custom  justify-center text-6xl'
+            //  ${
+            //   darkMode ? "text-white" : "text-black"
+            //  }`
+          }
+        > 
+          Ready to hire 10X faster?
         </h1>
+        <h3 className="flex  justify-center text-gray-300 font-light ">We’d love to connect</h3>
         <div className="w-full mt-8">
           <div className="mx-auto max-w-xs sm:max-w-md md:max-w-lg flex flex-col gap-4">
             <div className="flex flex-col sm:flex-row gap-3">
               <input
-                className={`w-full px-5 py-3 rounded-lg font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none  focus:border-2  focus:outline ${
-                  darkMode
-                    ? "bg-[#302E30] text-white focus:border-white"
-                    : "bg-gray-100 text-black focus:border-black"
-                }`}
+                className={'w-full px-5 py-3 rounded-lg font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none  focus:border-2  focus:outline '
+                //   ${
+                //   darkMode
+                //     ? "bg-[#302E30] text-white focus:border-white"
+                //     : "bg-gray-100 text-black focus:border-black"
+                // }
+              }
                 type="text"
                 placeholder="Your first name"
               />
               <input
-                className={`w-full px-5 py-3 rounded-lg  font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none focus:border-2  focus:outline ${
-                  darkMode
-                    ? "bg-[#302E30] text-white focus:border-white"
-                    : "bg-gray-100 text-black focus:border-black"
-                }`}
+                className={'w-full px-5 py-3 rounded-lg  font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none focus:border-2  focus:outline '
+                //   ${
+                //   darkMode
+                //     ? "bg-[#302E30] text-white focus:border-white"
+                //     : "bg-gray-100 text-black focus:border-black"
+                // }
+              }
                 type="text"
                 placeholder="Your last name"
               />
             </div>
             <input
-              className={`w-full px-5 py-3 rounded-lg  font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none focus:border-2  focus:outline ${
-                darkMode
-                  ? "bg-[#302E30] text-white focus:border-white"
-                  : "bg-gray-100 text-black focus:border-black"
-              }`}
+              className={'w-full px-5 py-3 rounded-lg  font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none focus:border-2  focus:outline'
+              //    ${
+              //   darkMode
+              //     ? "bg-[#302E30] text-white focus:border-white"
+              //     : "bg-gray-100 text-black focus:border-black"
+              // }
+            }
               type="email"
               placeholder="Enter your email"
             />
             <input
-              className={`w-full px-5 py-3 rounded-lg  font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none focus:border-2  focus:outline ${
-                darkMode
-                  ? "bg-[#302E30] text-white focus:border-white"
-                  : "bg-gray-100 text-black focus:border-black"
-              }`}
+              className={'w-full px-5 py-3 rounded-lg  font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none focus:border-2  focus:outline'
+              //    ${
+              //   darkMode
+              //     ? "bg-[#302E30] text-white focus:border-white"
+              //     : "bg-gray-100 text-black focus:border-black"
+              // }
+            }
               type="tel"
               placeholder="Enter your phone"
             />
             <input
-              className={`w-full px-5 py-3 rounded-lg  font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none focus:border-2  focus:outline ${
-                darkMode
-                  ? "bg-[#302E30] text-white focus:border-white"
-                  : "bg-gray-100 text-black focus:border-black"
-              }`}
+              className={'w-full px-5 py-3 rounded-lg  font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none focus:border-2  focus:outline '
+              //   ${
+              //   darkMode
+              //     ? "bg-[#302E30] text-white focus:border-white"
+              //     : "bg-gray-100 text-black focus:border-black"
+              // }
+            }
               type="password"
               placeholder="Password"
             />
-            <button className="mt-5 tracking-wide font-semibold bg-[#E9522C] text-gray-100 w-full py-4 rounded-lg hover:bg-[#E9522C]/90 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
+            <button className="mt-5 mb-8 tracking-wide font-semibold bg-blue-600 text-gray-100 w-full py-4 rounded-lg hover:bg-blue-200 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none cursor-pointer">
               <svg
                 className="w-6 h-6 -ml-2"
                 fill="none"
@@ -101,14 +114,14 @@ const DemoLogin = () => {
                 <circle cx="8.5" cy="7" r="4" />
                 <path d="M20 8v6M23 11h-6" />
               </svg>
-              <span className="ml-3">Register</span>
+              <span className="ml-3">Book Demo</span>
             </button>
-            <p className="mt-6 text-xs text-gray-600 text-center">
+            {/* <p className="mt-6 text-xs text-gray-600 text-center">
               Already have an account?{" "}
               <a href="">
                 <span className="text-[#E9522C] font-semibold">Login</span>
               </a>
-            </p>
+            </p> */}
           </div>
         </div>
       </div>

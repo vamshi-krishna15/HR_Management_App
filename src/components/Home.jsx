@@ -5,9 +5,10 @@ import VideoPlayer from './VideoPlayer';
 import CompanyLogos from './CompanyLogos';
 import TabsRender from './ButtonSwitcher';
 import nature from '../images/nature.webp';
-import images from '../images/image-1.jpg'
+import images from '../images/image-1.jpg';
 import Questions from './Questions';
 import Footer from './Footer'
+import paragraphRef from './Navbar'
 import {
   Card,
   CardHeader,
@@ -21,6 +22,7 @@ import {
   AppGalleryButton,
   ButtonsContainer,
 } from "react-mobile-app-button";
+import DemoLogin from "./DemoLogin";
  
 
 
@@ -31,6 +33,7 @@ import {
 const iOSUrl = "https://apps.apple.com/us/app/expo-go/id982107779";
 
 
+
   return(
     <>
     <div className=" flex flex-col w-screen h-screen scroll-smooth animate-jump-in animate-once animate-delay-700">
@@ -39,22 +42,22 @@ const iOSUrl = "https://apps.apple.com/us/app/expo-go/id982107779";
     <p class="text-xl text-center text-blue-500">World’s #1st AI Recruiter</p>
     </div>
 
-    <div className="font-custom">
-      <h1>
-      <p class="text-8xl text-center text-black">Close your hiring<br></br>in less than <span className="text-blue-600">24 Hours</span></p></h1>
-    </div>
+      <div className="font-custom">
+        <h1>
+        <p class="text-8xl text-center text-black">Close your hiring<br></br>in less than <span className="text-blue-600">24 Hours</span></p></h1>
+      </div>
 
-    <div className="font-custom ">
-      <h5>
-      <p class="text-center text-neutral-400">An AI powered recruiting platform that sources, shortlists, interviews and evaluates potential<br></br> candidates specific to your hiring needs - in just a day!</p></h5>
-    </div>
+      <div className="font-custom ">
+        <h5>
+        <p class="text-center text-neutral-400">An AI powered recruiting platform that sources, shortlists, interviews and evaluates potential<br></br> candidates specific to your hiring needs - in just a day!</p></h5>
+      </div>
     <div className="flex justify-center space-y-4 space-x--4">
     <div className=" min-h-screen bg-gray-100 ">
       <PhoneInputComponent />
     </div>
     <div className="">
       
-      <button className="inline-block bg-blue-600 border-blue-600 text-white px-16 py-5 rounded-lg cursor-pointer font-custom">Start Hiring</button>
+      <button className="inline-block bg-blue-600 border-blue-600 text-white px-16 py-5 rounded-lg cursor-pointer font-custom text-xl">Start Hiring</button>
     </div>
     </div>
     </div>
@@ -73,7 +76,7 @@ const iOSUrl = "https://apps.apple.com/us/app/expo-go/id982107779";
     </div>
     <div className="relative  absolute top-[200%] left-[0%] font-custom">
     <h1>
-    <p class=" text-6xl text-center text-black">Why companies across India are choosing<br></br> <span className="text-blue-600">GoodSpace</span></p></h1>
+    <p class=" text-6xl text-center text-black">Why companies across India are choosing<br></br> <span className="text-blue-600">Akriyan</span></p></h1>
     </div>
 
     <div>
@@ -141,7 +144,7 @@ const iOSUrl = "https://apps.apple.com/us/app/expo-go/id982107779";
 <div className=" bg-fixed overflow-x-scroll  h-[50%] w-92 font-custom" >
   <div className="flex flex-row  justify-center left-[40%] bg-blue-500">
     <div className="flex flex-col justify-center ">
-  <h1><span className="text-5xl">Post your job on GoodSpace <br></br> in seconds</span></h1>
+  <h1><span className="text-5xl">Post your job on Akriyan <br></br> in seconds</span></h1>
   <p className="text-xl">We prioritize your hiring requirements over everything else. You define what you need and we deliver!</p>
   </div>
     <div className="flex p-32 h-96">
@@ -190,7 +193,7 @@ const iOSUrl = "https://apps.apple.com/us/app/expo-go/id982107779";
 
 <div className=" bg-fixed bg-white-500  font-custom " >
   <div className="flex flex-row p-32">
-  <h1><span className="text-7xl">Experience the<span className="text-blue-500"> GoodSpace</span><br></br> app on mobile</span></h1> 
+  <h1><span className="text-7xl">Experience the<span className="text-blue-500"> Akriyan</span><br></br> app on mobile</span></h1> 
   <ButtonsContainer>
       <GooglePlayButton
         url={APKUrl}
@@ -210,11 +213,17 @@ const iOSUrl = "https://apps.apple.com/us/app/expo-go/id982107779";
   </div>
   </div>
 
+  
+
 <div className=" text-3xl ">
 <Questions />
 </div>
+
+<div className="">
+     <DemoLogin />
+  </div>
   
-    <div className=" bg-fixed text-3xl bg-blue-700 ">
+    <div className=" text-3xl bg-blue-700 ">
 
     <Footer />
     </div>
