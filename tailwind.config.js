@@ -155,7 +155,8 @@ module.exports = withMT({
     preflight: false,
   },
   plugins: [ 
-    require('tailwindcss-animated')
+    require('tailwindcss-animated'),
+    require('@tailwindcss/forms'),
   ],
 });
 

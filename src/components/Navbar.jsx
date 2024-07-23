@@ -1,18 +1,37 @@
 import React from "react";
+import PhoneInputComponent from "./PhoneInputComponent";
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import { useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import Logo from '../images/logo.png';
+//import { Login } from "./Login";
 
 
 const Navbar =() =>{
-  
+
+ // const [modalShow, setModalShow] = React.useState(false);
+ const [isPopoverOpen, setIsPopoverOpen] = useState(false);
+
+  //let isVisibleLogin = false;
   const paragraphRef = useRef(null);
+
+  const togglePopover = () => {
+    setIsPopoverOpen(!isPopoverOpen);
+  };
+  
+
+  //const popover =<Login />
+  // function handleClick() {
+  //   isVisibleLogin = true;
+  // }
 
 return(
   <nav className=" relative flex flex-row space-x-9 font-custom">
     <a className="" href="/"><img className="ml-16 w-52 h-full" src={Logo}></img></a>
    <div className="">
+    
+   {/* { isVisibleLogin ? <Login /> : null}  */}
+
    <ul className="flex  justify-start space-x-20 list-none no-underline ">
     {/* <li><a className="" href="/"><img className="w-36" src={Logo}></img></a></li> */}
 
@@ -85,14 +104,23 @@ return(
    >Book Demo</button>
    
 
+   <button className=" text-blue-600 border-blue-500 px-6 py-2 rounded-lg cursor-pointer text-lg h-16" variant="primary" onClick={togglePopover} >Login/Signup </button>
+   {isPopoverOpen && (
+    <>
+    <div className=" min-h-screen bg-gray-100 ">
+           <PhoneInputComponent />
+         </div>
+     <button
+     type="button"
+     onClick={togglePopover}
+     className="text-gray-500 hover:text-gray-700 w-24 h-52"
+   >
+     Cancel
+   </button>
+   </>
+   )}
 
-   
-   <button className=" text-blue-600 border-blue-500 px-6 py-2 rounded-lg cursor-pointer text-lg h-16" >Login/Signup</button>
-   
-
-
-   
-   <button className="bg-blue-500 border-blue-500 text-white px-16 py-1 rounded-lg cursor-pointer text-lg h-16" >Looking for job</button>
+   <button className="bg-blue-500 border-blue-500 text-white px-16 py-1 rounded-lg cursor-pointer text-lg h-16"  >Looking for job element</button>
    </div>
 
 </nav>
