@@ -9,7 +9,7 @@ export const user = 'vamshi'
 const Dashboard = () => {
   
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-blue-500">
       <header className="bg-white shadow">
         
         <div className=" container mx-auto px-0 py-2 flex justify-between items-center">
@@ -34,15 +34,15 @@ const Dashboard = () => {
         </div>
       </header>
       <main className="container  px-4 py-6 ">
-        <div className="grid grid-cols md:grid-cols-3 gap-6">
+        <div className="grid grid-cols col-auto md:grid-cols-4 gap-2">
           <div className="flex flex-col  mt-40 bg-white p- rounded-lg  w-96 shadow-2xl justify-center">
-          <div className='flex ml-44 w-full'>
+          <div className='flex ml-44 w-full mt-8'>
           <button className="flex justify-center material-icons  ">
             <a className="" href= {`/dashboard/${user}`}><span className="">account_circle</span></a>
             </button>
             
             </div>
-            <div className='flex mt-10 justify-center'>
+            <div className='flex mt-2 justify-center'>
               <h4>Vamshi Krishna</h4>
               </div>
               <div className='flex justify-center '>
@@ -58,10 +58,10 @@ const Dashboard = () => {
               </div>
           </div>
 
-          <div className=" bg-fixed bg-white  rounded-lg  w-full h-full">
+          <div className=" bg-white  rounded-lg h-full w-full h-full col-end-1 col-end-4 col-span-2 ">
           { <Jobtabs /> }
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-2xl w-96 h-[300%]">
+          <div className="bg-white p-6 rounded-lg shadow-2xl w-96 h-96">
             <h2 className="text-lg font-semibold mb-2">Card 3</h2>
             <p className="text-gray-700">Content for the third card goes here.</p>
           </div>
