@@ -32,7 +32,7 @@ function App() {
 <div>
   {!noNavbarRoutes.includes(location.pathname) && <Navbar />}
   <Routes>
-  <Route path="/" element= {<Suspense fallback={<div className='loader justify-center mt-96 ml-[44%] size-[50%]'></div>}>{<Home />}</Suspense> }/>
+  <Route path="/" element= {<Suspense fallback={<div className='loader justify-center mt-96 ml-[50%] size-[50%]'></div>}>{<Home />}</Suspense> }/>
 
   <Route path="/pricing" element={<Pricing />} />
 
