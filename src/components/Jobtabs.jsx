@@ -1,17 +1,69 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
+import JobCard from './JobCard';
 
 const Jobtabs = () => {
   const [activeTab, setActiveTab] = useState(1);
+  const [jobs, setJobs] = useState([]);
+
+  useEffect(() => {
+    // Sample data. You might fetch this from an API.
+    const jobData = [
+      {
+        id: 1,
+        title: 'Frontend Developer',
+        company: 'Tech Corp',
+        location: 'Remote',
+        url: '#',
+      },
+      {
+        id: 2,
+        title: 'Backend Developer',
+        company: 'Code Inc.',
+        location: 'San Francisco, CA',
+        url: '#',
+      },
+      {
+        id: 3,
+        title: 'Fullstack Developer',
+        company: 'Dev Solutions',
+        location: 'New York, NY',
+        url: '#',
+      },
+      {
+        id: 4,
+        title: 'Frontend Developer',
+        company: 'Tech Corp',
+        location: 'Remote',
+        url: '#',
+      },
+      {
+        id: 5,
+        title: 'Backend Developer',
+        company: 'Code Inc.',
+        location: 'San Francisco, CA',
+        url: '#',
+      },
+      {
+        id: 6,
+        title: 'Fullstack Developer',
+        company: 'Dev Solutions',
+        location: 'New York, NY',
+        url: '#',
+      },
+    ];
+
+    setJobs(jobData);
+  }, []);
 
   const tabs = [
-    { id: 1, title: 'All Jobs', content: 'Content for Tab 1' },
-    { id: 2, title: 'Applied', content: 'Content for Tab 2' },
-    { id: 3, title: 'Interviews', content: 'Content for Tab 3' },
+    { id: 1, title: 'All Jobs', content: {jobs} },
+    { id: 2, title: 'Applied', content: {jobs} },
+    { id: 3, title: 'Interviews', content: {jobs} },
   ];
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md border-none">
-      <div className="flex border-none   space-x-8 ">
+    <div className="bg-white p-6 rounded-lg shadow-md border-none scroll-auto">
+      <div className="flex border-none   space-x-8 bg-fixed">
         {tabs.map(tab => (
           <button
             key={tab.id}
@@ -23,7 +75,14 @@ const Jobtabs = () => {
         ))}
       </div>
       <div className="mt-4">
-        {tabs.find(tab => tab.id === activeTab)?.content}
+      <header className="bg-blue-600 p-3 text-white text-center text-3xl font-custom bg-fixed">
+        Job Openings
+      </header>
+      <div className="container mx-auto p-4  data-twe-smooth-scroll-init">
+      {tabs.find(tab => tab.id === activeTab)?.content.jobs.map((job) => (
+          <JobCard key={job.id} job={job} />
+        ))}
+         </div>
       </div>
     </div>
   );
