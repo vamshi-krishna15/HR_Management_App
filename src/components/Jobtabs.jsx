@@ -78,7 +78,7 @@ const Jobtabs = () => {
       <header className="bg-blue-600 p-3 text-white text-center text-3xl font-custom bg-fixed">
         Job Openings
       </header>
-      <div className="container mx-auto p-4  data-twe-smooth-scroll-init">
+      <div className="container mx-auto p-4">
       {tabs.find(tab => tab.id === activeTab)?.content.jobs.map((job) => (
           <JobCard key={job.id} job={job} />
         ))}
