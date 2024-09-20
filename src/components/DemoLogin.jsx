@@ -1,44 +1,44 @@
-import React, { useState } from "react";
+import React from "react";
+import  { useState } from "react";
 
 
 
 
-
-const DemoLogin = () => {
+function DemoLogin() {
   // const [darkMode, setDarkMode] = useState(false);
   return (
     <div className="flex flex-col justify-center  items-center w-full h-[100] bg-amber-50 px-5 mb-12">
       <div className=" flex flex-col justify-center border-8 border-black overflow-hidden mb-2 xl:max-w-3xl w-full">
         {/* <div className="flex">
-          <h3 className="text-white">Dark Mode : &nbsp;</h3> 
-          <label class="inline-flex relative items-center mr-5 cursor-pointer">
-            <input
-              type="checkbox"
-              className="sr-only peer"
-              checked={darkMode}
-              readOnly
-            />
-            <div
-              onClick={() => {
-                setDarkMode(!darkMode);
-              }}
-              className="w-11 h-6 bg-gray-200 rounded-full peer  peer-focus:ring-green-300  peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-green-600"
-            ></div>
-          </label>
-        </div>
-      </div>
-      <div
-        className={`xl:max-w-3xl ${
-          darkMode ? "bg-black" : "bg-white"
-        }  w-full p-5 sm:p-10 rounded-md`}
-      > */}
+              <h3 className="text-white">Dark Mode : &nbsp;</h3>
+              <label class="inline-flex relative items-center mr-5 cursor-pointer">
+                <input
+                  type="checkbox"
+                  className="sr-only peer"
+                  checked={darkMode}
+                  readOnly
+                />
+                <div
+                  onClick={() => {
+                    setDarkMode(!darkMode);
+                  }}
+                  className="w-11 h-6 bg-gray-200 rounded-full peer  peer-focus:ring-green-300  peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-green-600"
+                ></div>
+              </label>
+            </div>
+          </div>
+          <div
+            className={`xl:max-w-3xl ${
+              darkMode ? "bg-black" : "bg-white"
+            }  w-full p-5 sm:p-10 rounded-md`}
+          > */}
         <h1
           className={'flex font-custom  justify-center text-6xl'
             //  ${
             //   darkMode ? "text-white" : "text-black"
             //  }`
           }
-        > 
+        >
           Ready to hire 10X faster?
         </h1>
         <h3 className="flex  justify-center text-gray-300 font-light ">We’d love to connect</h3>
@@ -47,60 +47,55 @@ const DemoLogin = () => {
             <div className="flex flex-col sm:flex-row gap-3">
               <input
                 className={'w-full px-5 py-3 rounded-lg font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none  focus:border-2  focus:outline '
-                //   ${
-                //   darkMode
-                //     ? "bg-[#302E30] text-white focus:border-white"
-                //     : "bg-gray-100 text-black focus:border-black"
-                // }
-              }
+                  //   ${
+                  //   darkMode
+                  //     ? "bg-[#302E30] text-white focus:border-white"
+                  //     : "bg-gray-100 text-black focus:border-black"
+                  // }
+                }
                 type="text"
-                placeholder="Your first name"
-              />
+                placeholder="Your first name" />
               <input
                 className={'w-full px-5 py-3 rounded-lg  font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none focus:border-2  focus:outline '
-                //   ${
-                //   darkMode
-                //     ? "bg-[#302E30] text-white focus:border-white"
-                //     : "bg-gray-100 text-black focus:border-black"
-                // }
-              }
+                  //   ${
+                  //   darkMode
+                  //     ? "bg-[#302E30] text-white focus:border-white"
+                  //     : "bg-gray-100 text-black focus:border-black"
+                  // }
+                }
                 type="text"
-                placeholder="Your last name"
-              />
+                placeholder="Your last name" />
             </div>
             <input
               className={'w-full px-5 py-3 rounded-lg  font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none focus:border-2  focus:outline'
-              //    ${
-              //   darkMode
-              //     ? "bg-[#302E30] text-white focus:border-white"
-              //     : "bg-gray-100 text-black focus:border-black"
-              // }
-            }
+                //    ${
+                //   darkMode
+                //     ? "bg-[#302E30] text-white focus:border-white"
+                //     : "bg-gray-100 text-black focus:border-black"
+                // }
+              }
               type="email"
-              placeholder="Enter your email"
-            />
+              placeholder="Enter your email" />
             <input
               className={'w-full px-5 py-3 rounded-lg  font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none focus:border-2  focus:outline'
-              //    ${
-              //   darkMode
-              //     ? "bg-[#302E30] text-white focus:border-white"
-              //     : "bg-gray-100 text-black focus:border-black"
-              // }
-            }
+                //    ${
+                //   darkMode
+                //     ? "bg-[#302E30] text-white focus:border-white"
+                //     : "bg-gray-100 text-black focus:border-black"
+                // }
+              }
               type="tel"
-              placeholder="Enter your phone"
-            />
+              placeholder="Enter your phone" />
             <input
               className={'w-full px-5 py-3 rounded-lg  font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none focus:border-2  focus:outline '
-              //   ${
-              //   darkMode
-              //     ? "bg-[#302E30] text-white focus:border-white"
-              //     : "bg-gray-100 text-black focus:border-black"
-              // }
-            }
+                //   ${
+                //   darkMode
+                //     ? "bg-[#302E30] text-white focus:border-white"
+                //     : "bg-gray-100 text-black focus:border-black"
+                // }
+              }
               type="password"
-              placeholder="Password"
-            />
+              placeholder="Password" />
             <button className="mt-5 mb-8 tracking-wide font-semibold bg-blue-600 text-gray-100 w-full py-4 rounded-lg hover:bg-blue-200 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none cursor-pointer">
               <svg
                 className="w-6 h-6 -ml-2"
@@ -127,5 +122,5 @@ const DemoLogin = () => {
       </div>
     </div>
   );
-};
+}
 export default DemoLogin;

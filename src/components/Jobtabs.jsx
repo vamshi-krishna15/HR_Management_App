@@ -1,5 +1,7 @@
-import React, { useState,useEffect } from 'react';
+import React from 'react';
+import { useState,useEffect } from 'react';
 import JobCard from './JobCard';
+import { user } from './Dashboard';
 
 const Jobtabs = () => {
   const [activeTab, setActiveTab] = useState(1);
@@ -13,7 +15,7 @@ const Jobtabs = () => {
         title: 'Frontend Developer',
         company: 'Tech Corp',
         location: 'Remote',
-        url: '#',
+        url: `/jobinfo/${user}`,
       },
       {
         id: 2,
@@ -50,6 +52,13 @@ const Jobtabs = () => {
         location: 'New York, NY',
         url: '#',
       },
+      {
+        id: 7,
+        title: 'Developer',
+        company: 'Dev Solutions',
+        location: 'New York, NY',
+        url: '#',
+      },
     ];
 
     setJobs(jobData);
@@ -62,8 +71,8 @@ const Jobtabs = () => {
   ];
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md border-none scroll-auto">
-      <div className="flex border-none   space-x-8 bg-fixed">
+    <div className="bg-white p-6 rounded-lg shadow-md border-none">
+      <div className="flex border-none   space-x-8 ">
         {tabs.map(tab => (
           <button
             key={tab.id}
@@ -78,7 +87,7 @@ const Jobtabs = () => {
       <header className="bg-blue-600 p-3 text-white text-center text-3xl font-custom bg-fixed">
         Job Openings
       </header>
-      <div className="container mx-auto p-4">
+      <div className="container mx-auto p-4 fixed w-[45%] overflow-scroll h-[65%] scrollbar-hide py-12">
       {tabs.find(tab => tab.id === activeTab)?.content.jobs.map((job) => (
           <JobCard key={job.id} job={job} />
         ))}

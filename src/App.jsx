@@ -9,17 +9,19 @@ import Aboutus from './components/Aboutus';
 import Ourteam from './components/Ourteam';
 import Careers from './components/Careers';
 import ErrorLoading from './components/ErrorLoading';
-import { Login } from './components/Login';
+import Login  from './components/Login';
 import Contact from './components/Contact';
 import Dashboard ,{user} from './components/Dashboard';
 import Editprofile from './components/Editprofile';
+import Jobinfo from './components/Jobinfo';
+import Register from './components/Register';
 
 
-const Home = lazy(() => delayImport(() => import('./components/Home'),3000));
+const Home = lazy(() => delayImport(() => import('./components/Home'),2000));
 
 function App() {
   const location = useLocation();
-  const noNavbarRoutes = ['/dashboard',`/dashboard/${user}`];
+  const noNavbarRoutes = ['/dashboard',`/dashboard/${user}`,`/jobinfo/${user}`];
 
   useEffect(() => {
     initTWE({ Tooltip });
@@ -33,6 +35,10 @@ function App() {
   {!noNavbarRoutes.includes(location.pathname) && <Navbar />}
   <Routes>
   <Route path="/" element= {<Suspense fallback={<div className='loader justify-center mt-96 ml-[50%] size-[50%]'></div>}>{<Home />}</Suspense> }/>
+
+  <Route path="/login" element={<Login />} />
+
+  <Route path="/register" element={<Register />} />
 
   <Route path="/pricing" element={<Pricing />} />
 
@@ -54,10 +60,12 @@ function App() {
 
   <Route path="/dashboard/:name"  element={<Editprofile />} />
   
+  <Route path={`/jobinfo/${user}`} element={<Jobinfo />} />
+
 </Routes>
 </div>
   </>
-    
+
   );
 }
 const AppWrapper = () => (

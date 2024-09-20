@@ -3,37 +3,37 @@ import PhoneInputComponent from "./PhoneInputComponent";
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { useState, useRef } from "react";
+import { Link} from "react-router-dom";
 import Logo from '../images/logo.png';
-//import { Login } from "./Login";
+import  Login  from "../components/Login";
 
-
+const handleSubmit = async (e) => {
+  e.preventDefault();
+}
 const Navbar =() =>{
 
- // const [modalShow, setModalShow] = React.useState(false);
- const [isPopoverOpen, setIsPopoverOpen] = useState(false);
+ 
+  const [modalShow, setModalShow] = useState(false);
 
-  //let isVisibleLogin = false;
+  
   const paragraphRef = useRef(null);
 
-  const togglePopover = () => {
-    setIsPopoverOpen(!isPopoverOpen);
-  };
+  // const togglePopover = () => {
+   
+  //   setShowPopup(!showPopup);
+  // };
   
 
-  //const popover =<Login />
-  // function handleClick() {
-  //   isVisibleLogin = true;
-  // }
-
+  
 return(
-  <nav className=" relative flex flex-row space-x-9 font-custom">
+  <nav className=" flex flex-row space-x-12 font-custom">
     <a className="" href="/"><img className="ml-16 w-52 h-full" src={Logo}></img></a>
    <div className="">
     
-   {/* { isVisibleLogin ? <Login /> : null}  */}
+  
 
    <ul className="flex  justify-start space-x-20 list-none no-underline ">
-    {/* <li><a className="" href="/"><img className="w-36" src={Logo}></img></a></li> */}
+  
 
      <li>
      <Menu as="div" className="relative inline-block text-left ">
@@ -73,16 +73,6 @@ return(
              Careers
             </a>
           </MenuItem>
-          {/* <form action="#" method="POST">
-            <MenuItem>
-              <button
-                type="submit"
-                className="block w-full px-4 py-2 text-left text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900 no-underline"
-              >
-                Sign out
-              </button>
-            </MenuItem>
-          </form> */}
         </div>
       </MenuItems>
     </Menu></li>
@@ -97,18 +87,22 @@ return(
    <button className=" text-blue-600 border-blue-500 px-6 py-1 rounded-lg text-lg cursor-pointer h-16" 
    onClick={() =>
     window.scrollTo({
-      top: paragraphRef.current.offsetTop,
+      top: paragraphRef.current.focus(),
       behavior: "smooth"
     })
   }
    >Book Demo</button>
    
 
-   <button className=" text-blue-600 border-blue-500 px-6 py-2 rounded-lg cursor-pointer text-lg h-16" variant="primary" onClick={togglePopover} >Login/Signup </button>
-   {isPopoverOpen && (
+   <Link to="/login"><button className=" text-blue-600 border-blue-500 px-6 py-2 rounded-lg cursor-pointer text-lg h-16" variant="primary" /*onClick={() => setModalShow(true)}*/ >Login/Signup </button></Link>
+   {/* {modalShow && <Login
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />}
+   {/* {showPopup && ( }
     <>
     <div className=" min-h-screen bg-gray-100 ">
-           <PhoneInputComponent />
+           <PhoneInputComponent show={showPopup} onClose={togglePopover} />
          </div>
      <button
      type="button"
@@ -118,7 +112,7 @@ return(
      Cancel
    </button>
    </>
-   )}
+   )} */}
 
    <button className="bg-blue-500 border-blue-500 text-white px-16 py-1 rounded-lg cursor-pointer text-lg h-16"  >Looking for job element</button>
    </div>

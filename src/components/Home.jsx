@@ -25,6 +25,9 @@ import {
 import DemoLogin from "./DemoLogin";
  
 
+const handleSubmit = async (e) => {
+  e.preventDefault();
+}
 
  const Home = () =>{
 
@@ -141,7 +144,7 @@ const iOSUrl = "https://apps.apple.com/us/app/expo-go/id982107779";
 
 <div className=" flex flex-col relative  top-[140%] scroll-auto ">
 
-<div className=" bg-fixed overflow-x-scroll  h-[50%] w-92 font-custom" >
+<div className=" bg-fixed overflow-scroll  h-[50%] w-92 font-custom scrollbar-hide" >
   <div className="flex flex-row  justify-center left-[40%] bg-blue-500">
     <div className="flex flex-col justify-center ">
   <h1><span className="text-5xl">Post your job on Akriyan <br></br> in seconds</span></h1>
@@ -154,7 +157,7 @@ const iOSUrl = "https://apps.apple.com/us/app/expo-go/id982107779";
   
 
   
-<div className=" bg-srcoll  bg-white-800 h-[50%] w-92" >
+<div className=" bg-scroll bg-white-800 h-[50%] w-92" >
   <div className="flex flex-row p-32">
     <img src={nature}></img>
     <div className="flex flex-col p-20 ">
@@ -165,7 +168,7 @@ const iOSUrl = "https://apps.apple.com/us/app/expo-go/id982107779";
 
 </div>
 
-<div className=" bg-local bg-blue-500 h-[50%] w-92 " >
+<div className=" bg-blue-500 h-[50%] w-92 " >
   <div className="flex flex-row p-32 h-96">
     <img src={images}></img>
     <div className="flex flex-col p-32 justify-center left-[50%]">
@@ -176,7 +179,7 @@ const iOSUrl = "https://apps.apple.com/us/app/expo-go/id982107779";
 
 </div>
 
-<div className=" bg-fixed bg-white-500 h-[50%] w-92  " >
+<div className=" bg-white-500 h-[50%] w-92  " >
   <div className="flex flex-row p-20">
     <img src={nature}></img>
     <div className="flex flex-col p-32">

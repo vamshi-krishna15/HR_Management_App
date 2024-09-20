@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useState } from 'react';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import CountryDropdown from './CountryDropdown';
@@ -13,9 +14,12 @@ const countries = [
   { name: 'New Zealand', code: 'nz' },
 ];
 
-const PhoneInputComponent = () => {
+const PhoneInputComponent = ({ show, onClose }) => {
+  
   const [phone, setPhone] = useState('');
   const [selectedCountry, setSelectedCountry] = useState(countries[0]);
+
+  if (!show) return null;
 
   return (
     <div className=" flex p-6  bg-white rounded-xl  ">
@@ -33,6 +37,9 @@ const PhoneInputComponent = () => {
         inputClass="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 block w-full sm:text-lg border rounded-md px-18 py-6 "
      
       />
+       <button onClick={onClose} className="text-gray-500 hover:text-gray-700">
+            ✕
+          </button>
     </div>
   );
 };

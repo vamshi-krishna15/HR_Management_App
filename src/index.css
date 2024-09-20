@@ -35,3 +35,9 @@
 @keyframes l12-1 { 
  100% {transform: rotate(-2deg)}
 }
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+

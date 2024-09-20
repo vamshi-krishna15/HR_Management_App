@@ -122,7 +122,7 @@ const Tabs = ({ color }) => {
         </Typography>
       </CardBody>
       <CardFooter className="pt-0">
-        <Button className=" bg-blue-500 text-white">Read More</Button>
+        <Button className=" bg-blue-500 text-white cursor-pointer">Read More</Button>
       </CardFooter>
     </Card>
     </div>
@@ -139,7 +139,7 @@ const Tabs = ({ color }) => {
         </Typography>
       </CardBody>
       <CardFooter className="pt-0">
-        <Button className=" bg-blue-500 text-white">Read More</Button>
+        <Button className=" bg-blue-500 text-white cursor-pointer">Read More</Button>
       </CardFooter>
     </Card>
     </div>
@@ -166,7 +166,7 @@ const Tabs = ({ color }) => {
         </Typography>
       </CardBody>
       <CardFooter className="pt-0">
-        <Button className=" bg-blue-500 text-white">Read More</Button>
+        <Button className=" bg-blue-500 text-white cursor-pointer">Read More</Button>
       </CardFooter>
     </Card>
     </div>
@@ -183,7 +183,7 @@ const Tabs = ({ color }) => {
         </Typography>
       </CardBody>
       <CardFooter className="pt-0">
-        <Button className=" bg-blue-500 text-white">Read More</Button>
+        <Button className=" bg-blue-500 text-white cursor-pointer">Read More</Button>
       </CardFooter>
     </Card>
     </div>
@@ -210,7 +210,7 @@ const Tabs = ({ color }) => {
         </Typography>
       </CardBody>
       <CardFooter className="pt-0">
-        <Button className=" bg-blue-500 text-white">Read More</Button>
+        <Button className=" bg-blue-500 text-white cursor-pointer">Read More</Button>
       </CardFooter>
     </Card>
     </div>
@@ -227,7 +227,7 @@ const Tabs = ({ color }) => {
         </Typography>
       </CardBody>
       <CardFooter className="pt-0">
-        <Button className=" bg-blue-500 text-white">Read More</Button>
+        <Button className=" bg-blue-500 text-white cursor-pointer">Read More</Button>
       </CardFooter>
     </Card>
     </div>
@@ -254,7 +254,7 @@ const Tabs = ({ color }) => {
         </Typography>
       </CardBody>
       <CardFooter className="pt-0 ">
-        <Button className=" bg-blue-600 border-blue-600 text-white">Read More</Button>
+        <Button className=" bg-blue-600 border-blue-600 text-white cursor-pointer">Read More</Button>
       </CardFooter>
     </Card>
     </div>
@@ -271,7 +271,7 @@ const Tabs = ({ color }) => {
         </Typography>
       </CardBody>
       <CardFooter className="pt-0">
-        <Button className=" bg-blue-600 border-blue-600 text-white">Read More</Button>
+        <Button className=" bg-blue-600 border-blue-600 text-white cursor-pointer">Read More</Button>
       </CardFooter>
     </Card>
     </div>

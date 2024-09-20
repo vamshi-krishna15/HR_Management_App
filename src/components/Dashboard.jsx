@@ -3,16 +3,17 @@ import Jobtabs  from './Jobtabs';
 import Profile  from './Profile';
 import { Progress } from "@material-tailwind/react";
 import Logo from '../images/logo.png';
+//import "../index.css";
 
 
 export const user = 'vamshi'
 const Dashboard = () => {
   
   return (
-    <div className="min-h-screen bg-blue-500">
-      <header className="bg-white shadow">
+    <div className=" w-[99%] h-screen bg-blue-500 fixed">
+      <header className="  ">
         
-        <div className=" container mx-auto px-0 py-2 flex justify-between items-center">
+        <div className=" w-screen container px-2 py-0 flex justify-between items-center fixed bg-white" >
         <a className="" href="/dashboard"><img className="ml-16 w-44 h-full" src={Logo}></img></a>
           <input
             type="text"
@@ -22,19 +23,19 @@ const Dashboard = () => {
           <div className="flex space-x-4">
             <button className="relative">
               <span className="material-icons">notifications</span>
-              <span className="absolute -top-1 -right-2 bg-red-500 text-white rounded-full text-xs w-4 h-4 flex items-center justify-center">3</span>
+              <span className="absolute -top-1 -right-2 bg-red-500 text-white rounded-full text-xs w-4 h-4 flex items-center justify-center">10</span>
             </button>
             <button>
               <span className="material-icons">message</span>
             </button>
-            <button>
-              <span className="" ><Profile /></span>
-            </button>
+            <div>
+              <span className="font-bold" ><Profile /></span>
+            </div>
           </div>
         </div>
       </header>
-      <main className="container  px-4 py-6">
-        <div className="grid grid-cols  md:grid-cols-4 gap-2">
+      <main className="container px-4 py-4">
+        <div className="grid grid-cols  md:grid-cols-4 gap-5 mt-[6%]">
           <div className=" flex-col  mt-40 bg-white rounded-lg  h-96 w-96 shadow-2xl justify-center">
           <div className='flex ml-44 w-full mt-8'>
           <button className="flex justify-center material-icons  ">
@@ -58,7 +59,7 @@ const Dashboard = () => {
               </div>
           </div>
 
-          <div className=" bg-white rounded-lg h-full w-full h-full col-end-1 col-end-4 col-span-2 ">
+          <div className=" bg-white rounded-lg h-[10%] w-full col-end-1 col-end-4 col-span-2">
           { <Jobtabs /> }
           </div>
           <div className="bg-white p-6 rounded-lg shadow-2xl w-96 h-96">
